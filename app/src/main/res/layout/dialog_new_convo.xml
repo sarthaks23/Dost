@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <EditText
+        android:id="@+id/new_convo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_new_convo"
+        android:imeOptions="actionDone|flagNoExtractUi"
+        android:inputType="textCapWords"
+        android:textColor="@color/black"
+        android:textColorHint="@color/dark_grey"
+        android:nextFocusDown="@+id/convo_with"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/convo_text"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/new_convo"
+        android:text="Convo With:"
+        android:textSize="24dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/convo_with"
+        android:layout_height="wrap_content"
+        android:hint="Enter Email"
+        android:imeOptions="actionDone|flagNoExtractUi"
+        android:textColor="@color/black"
+        android:textColorHint="@color/dark_grey"
+        android:layout_below="@id/convo_text"/>
+
+</RelativeLayout>

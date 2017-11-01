@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.sanjyog.www.tabbedacttest.Login.CreateNewAccount"
+    tools:showIn="@layout/activity_create_new_account"
+    android:background="@color/colorPrimary"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_create_account_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/edit_text_username_create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_enter_username"
+            android:inputType="textCapWords"
+            android:layout_margin="10dp"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"/>
+
+        <EditText
+            android:id="@+id/edit_text_email_create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_enter_email"
+            android:inputType="textEmailAddress"
+            android:layout_margin="10dp"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"/>
+
+
+
+        <EditText
+            android:id="@+id/edit_text_password_create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_enter_password"
+            android:inputType="textPassword"
+            android:layout_margin="10dp"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"/>
+        <EditText
+            android:id="@+id/edit_text_password_reenter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_reenter_password"
+            android:inputType="textPassword"
+            android:layout_margin="10dp"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"/>
+
+        <Button
+            android:id="@+id/btn_create_account_final"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary"
+            android:onClick="Register"
+            android:text="Create Account"
+            android:textColor="@android:color/white"
+            android:layout_margin="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/tv_already_have_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_already_have_account"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/tv_sign_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="ReturnToSignIn"
+                android:text="@string/button_sign_in"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/primary"
+                android:textSize="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

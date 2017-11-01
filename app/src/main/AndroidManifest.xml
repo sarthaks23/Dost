@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sanjyog.www.tabbedacttest">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:icon="@drawable/dost"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        >
+        <activity
+            android:name=".Test_act"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            ></activity>
+        <activity
+            android:name=".IndivConvoScreen.indivConvoScreen"
+            android:label="@string/title_activity_indiv_convo_screen"
+            android:parentActivityName=".Test_act"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sanjyog.www.tabbedacttest.Test_act"
+                />
+        </activity>
+        <activity
+            android:name=".Login.MyLogin"
+            android:label="Dost"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Login.CreateNewAccount"
+            android:label="@string/title_activity_create_new_account"
+            android:parentActivityName=".Login.MyLogin"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sanjyog.www.tabbedacttest.Login.MyLogin" />
+        </activity>
+    </application>
+
+</manifest>

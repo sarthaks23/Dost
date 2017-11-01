@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sanjyog.www.tabbedacttest.IndivConvoScreen.indivConvoScreenFragment"
+    tools:showIn="@layout/activity_indiv_convo_screen"
+    android:orientation="vertical">
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/MessageScreen"
+        android:clickable="false"
+        android:dividerHeight="0dp"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"></ListView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/primary"
+        android:padding="10dp"
+        >
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/inputMessage"
+            android:hint="Enter Message Here"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/send_button"
+            android:src="@android:drawable/ic_menu_send"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            />
+        <!--<ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@android:drawable/ic_menu_camera"
+            android:layout_marginRight="5dp"/>-->
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:id="@+id/menu_expander"
+           android:src="@android:drawable/arrow_up_float"
+           android:layout_marginRight="5dp"
+           android:clickable="true"
+           android:onClick="RenameConvoDialog"/>
+
+    </LinearLayout>
+
+</LinearLayout>
